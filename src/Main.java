@@ -41,8 +41,7 @@
 public class Main {
 
     public static void main(String[] args) {
-        int strNum = 0,
-                whtSpaceEnd = 7;
+        int strNum = 0, whtSpaceEnd = 7;
 
         for (int row = 1; row <= 128; row += row) {
 
