@@ -41,24 +41,35 @@
 public class Main {
 
     public static void main(String[] args) {
-        int strNum = 0, whtSpaceEnd = 7;
+        makePattern();
 
+    }
+
+    /**
+     * makePattern makes a pyramid on powers of 2 using a 3 for loops inside a for loop
+     */
+
+    static void makePattern(){
+        int startNum = 0, whtSpaceEnd = 7;
+        //row determines how high the pyramid will be
         for (int row = 1; row <= 128; row += row) {
-
+            //This creates whitespace on the left side of the and reduces it as the pyramid grows from top to bottom
             for (int whtSpaceBeg = 0; whtSpaceBeg < whtSpaceEnd; whtSpaceBeg++) {
                 System.out.print("    ");
             }
-
+            //This determines the left side of the pyramid, increasing 1 to 1+1 to 2+2 4+4 etc. determined by row
             for (int l = 1; l <= row; l += l) {
                 System.out.printf("%4d", (l));
             }
-
-            for (int r = strNum; r > 0 ; r /= 2 ) {
+            //This determines the right side of the pyramid
+            for (int r = startNum; r > 0 ; r /= 2 ) {
                 System.out.printf("%4d", (r));
             }
             System.out.println();
             whtSpaceEnd--;
-            strNum = row;
+            startNum = row;
         }
+
     }
+
 }
