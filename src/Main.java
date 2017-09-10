@@ -46,7 +46,10 @@ public class Main {
     }
 
     /**
-     * makePattern makes a pyramid on powers of 2 using a 3 for loops inside a for loop
+     * <p>makePattern makes a pyramid on powers of 2 using a 3 for loops inside a for loop
+     * Row in first for loop determines how high the pyramid will be. The second for loop creates whitespace on the left side of the and reduces it as the pyramid grows from top to bottom.
+     * Third for loop determines the left side of the pyramid, increasing 1 to 1+1 to 2+2 4+4 etc. determined by row.
+     * Fourth and final for loop determines the right side of the pyramid</p>
      */
 
     static void makePattern(){
